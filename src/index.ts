@@ -2,3 +2,4 @@
 export * from "./types/index.js";
 export * from "./shared/index.js";
 export * from "./get-available-translations/index.js";
+export * from "./get-list-of-book-ids/index.js";

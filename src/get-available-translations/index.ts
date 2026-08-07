@@ -23,7 +23,7 @@ async function getAvailableTranslations(): Promise<TOutput> {
       return { code: "api-fail", message: `${fName}: Something Went Wrong.`, payload: null };
     } else {
       const data = await response.json();
-      return { code: "api-fail", message: `${fName}: Something Went Wrong.`, payload: data };
+      return { code: "api-ok", message: "Success. Check Payload.", payload: data };
     }
   } catch (error) {
     console.log(error);
