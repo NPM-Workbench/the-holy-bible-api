@@ -3,28 +3,35 @@ import { API_ROOT } from "../shared/index.js";
 import { TAPIRes } from "../types/index.js";
 
 /* types */
-type TGetRandomVerseRes = TAPIRes & {
+type TGetTranslationByParamsRes = TAPIRes & {
   payload: Record<string, any> | null;
 };
 type TInput = {
   translationId: string,
-  bookId?: string
+  bookId?: string,
+  chapterId?: number,
 };
-type TOutput = TGetRandomVerseRes;
+type TOutput = TGetTranslationByParamsRes;
 
 /* module */
-async function getRandomVerse(props?: TInput): Promise<TOutput> {
+async function getTranslationByParams(props?: TInput): Promise<TOutput> {
   /* setup */
   let API_URL = `${API_ROOT}/data`;
-  const fName = "Get Random Verse";
+  const fName = "Get Translation By Params";
 
   /* props? */
   if (props) {
     const tId = props.translationId;
+    API_URL = `${API_URL}/${tId}`;
+
     const bId = props.bookId ?? "";
-    API_URL = `${API_URL}/${tId}/random${(!!bId) ? "/" + bId : ''}`;
+    const vId = props.chapterId ?? "";
+    if (bId) {
+      API_URL += `/${bId}`;
+      API_URL += !!(vId) ? "/" + vId : "";
+    }
   } else {
-    API_URL = `${API_URL}/web/random`;
+    API_URL += "/web";
   }
 
   try {
@@ -45,5 +52,5 @@ async function getRandomVerse(props?: TInput): Promise<TOutput> {
 }
 
 /* exports */
-export type { TGetRandomVerseRes };
-export { getRandomVerse };
+export type { TGetTranslationByParamsRes };
+export { getTranslationByParams };
