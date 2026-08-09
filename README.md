@@ -1,5 +1,12 @@
+![Banner](https://github.com/user-attachments/assets/9a9a60bf-59f8-49bc-ae59-f25fd5af0629)
+![npm](https://img.shields.io/npm/v/the-holy-bible-api)
+![downloads](https://img.shields.io/npm/dw/the-holy-bible-api)
+![license](https://img.shields.io/npm/l/the-holy-bible-api)
+![Security Policy](https://img.shields.io/badge/security-policy-brightgreen)
+![npm_provenance](https://img.shields.io/badge/npm-provenance-brightgreen?logo=npm)
+![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/the-holy-bible-api)
 
-# the-holy-bible-api-client
+# the-holy-bible-api
 A lightweight, type-safe JavaScript/TypeScript client for the **Bible API** [bible-api.com](https://bible-api.com/), built specifically around its **Parameterized API**. This package wraps the identifier-based `/data` endpoints with a clean, promise-based interface, predictable error handling and zero runtime configuration.
 
 ### 📦 Installation
@@ -73,7 +80,7 @@ await myFunc();
 */
 ```
 
-3. 📁 Get a Translation by Params (Book / Chapter)
+3. 📁 Get a Translation by Params (Book / Chapter)<br/>
 Note: Calling `getTranslationByParams()` with no arguments falls back to the full **World English Bible** (`web`) book listing.
 ```javascript
 /* node modules */
@@ -104,7 +111,7 @@ await myFunc();
 }
 */
 ```
-4. 📁 Get a Random Verse
+4. 📁 Get a Random Verse<br/>
 Note: Calling `getRandomVerse()` with no arguments falls back to a random verse from the **World English Bible** (`web`) across the whole book.
 ```javascript
 /* node modules */
@@ -200,8 +207,8 @@ Contributions, suggestions, and improvements are welcome.
 Feel free to open issues or pull requests.
 
 ### 🔒 Security & Privacy
-1. This package is open source and intended to provide reusable utilities for application development. It does not collect, store, transmit, sell, or share user data, and it does not include analytics, tracking, telemetry, cookies, local storage usage, backend services, or project-owned data collection mechanisms.
-2. All requests are made directly from the consuming application to `bible-api.com`; this package does not proxy, cache, or persist any response data on its own.
+1. This package is open source and intended to provide reusable utilities for application development. It does not collect, store, transmit, sell, or share user data and it does not include analytics, tracking, telemetry, cookies, local storage usage, backend services, or project-owned data collection mechanisms.
+2. All requests are made directly from the consuming application to `bible-api.com`; this package does not proxy, cache, or persist any response data on its own. For more information, [click here](https://github.com/NPM-Workbench/the-holy-bible-api/blob/feature/dev/SECURITY.md)
 
 ### ❤️ Support
 Like this project? Support it with a github star, it would mean a lot to me! Cheers and Happy Coding.
