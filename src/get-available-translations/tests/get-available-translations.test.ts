@@ -32,7 +32,7 @@ describe("Get Available Translations", () => {
     /* asserts */
     expect(fetchSpy).toHaveBeenCalledTimes(1);
     expect(fetchSpy).toHaveBeenCalledWith(
-      expect.stringContaining(`${API_ROOT}/dat`),
+      expect.stringContaining(`${API_ROOT}/data`),
       expect.objectContaining({ method: "GET" })
     );
   });
