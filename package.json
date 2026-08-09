@@ -1,0 +1,43 @@
+{
+  "name": "the-holy-bible-api",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "version": "2.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf -v ./dist && rm -rf -v ./coverage",
+    "prepublishOnly": "npm run build",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage --verbose"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "msw": "^2.15.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NPM-Workbench/the-holy-bible-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NPM-Workbench/the-holy-bible-api/issues"
+  },
+  "homepage": "https://github.com/NPM-Workbench/the-holy-bible-api"
+}
