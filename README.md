@@ -30,7 +30,7 @@ npm install the-holy-bible-api-client
 1. 📁 Get Available Translations
 ```javascript
 /* node modules */
-import { getAvailableTranslations } from 'the-holy-bible-api-client';
+import { getAvailableTranslations } from 'the-holy-bible-api';
 
 async function myFunc() {
   const response = await getAvailableTranslations();
@@ -56,7 +56,7 @@ await myFunc();
 2. 📁 Get List of Book Ids for a Translation
 ```javascript
 /* node modules */
-import { getListOfBookIds } from 'the-holy-bible-api-client';
+import { getListOfBookIds } from 'the-holy-bible-api';
 
 async function myFunc() {
   const response = await getListOfBookIds({ id: 'web' });
@@ -84,7 +84,7 @@ await myFunc();
 Note: Calling `getTranslationByParams()` with no arguments falls back to the full **World English Bible** (`web`) book listing.
 ```javascript
 /* node modules */
-import { getTranslationByParams } from 'the-holy-bible-api-client';
+import { getTranslationByParams } from 'the-holy-bible-api';
 
 async function myFunc() {
   const response = await getTranslationByParams({
@@ -115,7 +115,7 @@ await myFunc();
 Note: Calling `getRandomVerse()` with no arguments falls back to a random verse from the **World English Bible** (`web`) across the whole book.
 ```javascript
 /* node modules */
-import { getRandomVerse } from 'the-holy-bible-api-client';
+import { getRandomVerse } from 'the-holy-bible-api';
 
 async function myFunc() {
   const response = await getRandomVerse({
@@ -147,7 +147,7 @@ await myFunc();
 5. 📁 Get a Random Verse from the Old Testament
 ```javascript
 /* node modules */
-import { getRandomVerseOldTestament } from 'the-holy-bible-api-client';
+import { getRandomVerseOldTestament } from 'the-holy-bible-api';
 
 async function myFunc() {
   const response = await getRandomVerseOldTestament({ id: 'web' });
@@ -176,7 +176,7 @@ await myFunc();
 6. 📁 Get a Random Verse from the New Testament
 ```javascript
 /* node modules */
-import { getRandomVerseNewTestament } from 'the-holy-bible-api-client';
+import { getRandomVerseNewTestament } from 'the-holy-bible-api';
 
 async function myFunc() {
   const response = await getRandomVerseNewTestament({ id: 'web' });
