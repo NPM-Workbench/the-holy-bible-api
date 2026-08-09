@@ -202,6 +202,98 @@ await myFunc();
 */
 ```
 
+### 📗 Test Coverage
+```console
+PASS  src/shared/tests/index.test.ts
+  Root File Test
+    ✓ base-api URL is as expected
+
+PASS  src/get-available-translations/tests/get-available-translations.test.ts
+  Get Available Translations
+    ✓ fetch gets called with expected parameters
+    ✓ returns 200-OK response
+    ✓ returns 4xx-Err response
+
+PASS  src/get-random-verse/tests/get-random-verse.test.ts
+  Get Random Verse
+    ✓ random verse: translation-id = mock-value; 200-ok
+    ✓ random verse: translation-id = mock-value; 4xx-er
+    ✓ random verse: translation-id = web; 200-ok
+    ✓ random verse: translation-id = web; 4xx-er
+    ✓ random verse: translation-id = mock-value, book-id = mock-value; 200-ok
+    ✓ random verse: translation-id = mock-value, book-id = mock-value; 4xx-er
+
+PASS  src/get-random-verse-new-testament/tests/get-random-verse-new-testament.test.ts
+   Get Random Verse: New Testament
+    ✓ throws error when fields are invalid
+    ✓ fetch gets called with expected paramters
+    ✓ returns 200-OK response
+    ✓ returns 4xx-Err response
+
+PASS  src/get-list-of-book-ids/tests/get-list-of-book-ids.test.ts
+  Get List Of Book Ids
+    ✓ fails when invalid props are passed
+    ✓ fetch gets called with expected parameters
+    ✓ return 200OK response
+    ✓ returns 4xx-Err response
+
+ PASS  src/get-translation-by-params/tests/get-translation-by-params.test.ts
+  Get Translation By Params
+    ✓ fetch gets called with expected parameters for translation-only
+    ✓ fetch gets called with expected parameters for translation + book id
+    ✓ returns 200-OK response for translation-only
+    ✓ returns 200-OK response for translation + book id
+    ✓ returns 200-OK response for translation + book id + chapter id
+    ✓ returns 200-OK response for web default endpoint
+    ✓ returns 4xx-Err response
+
+PASS  src/get-random-verse-old-testament/tests/get-random-verse-old-testament.test.ts
+  Get Random Verse: Old Testament
+    ✓ throws err when fields are invalid
+    ✓ fetch gets called with expected parameters
+    ✓ returns 200-OK response
+    ✓ return 4xx-Err response
+
+--------------------------------------|---------|----------|---------|---------|-------------------
+File                                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------------------|---------|----------|---------|---------|-------------------
+All files                             |   97.13 |    90.76 |     100 |   97.13 |                   
+ get-available-translations           |   91.66 |       75 |     100 |   91.66 |                   
+  index.ts                            |   91.66 |       75 |     100 |   91.66 | 29-31             
+ get-available-translations/tests     |     100 |      100 |     100 |     100 |                   
+  msw-handlers.ts                     |     100 |      100 |     100 |     100 |                   
+ get-list-of-book-ids                 |   93.18 |    83.33 |     100 |   93.18 |                   
+  index.ts                            |   93.18 |    83.33 |     100 |   93.18 | 36-38             
+ get-list-of-book-ids/tests           |     100 |      100 |     100 |     100 |                   
+  msw-handlers.ts                     |     100 |      100 |     100 |     100 |                   
+ get-random-verse                     |   93.87 |     87.5 |     100 |   93.87 |                   
+  index.ts                            |   93.87 |     87.5 |     100 |   93.87 | 42-44             
+ get-random-verse-new-testament       |   93.18 |    83.33 |     100 |   93.18 |                   
+  index.ts                            |   93.18 |    83.33 |     100 |   93.18 | 36-38             
+ get-random-verse-new-testament/tests |     100 |      100 |     100 |     100 |                   
+  msw-handler.ts                      |     100 |      100 |     100 |     100 |                   
+ get-random-verse-old-testament       |   93.18 |    83.33 |     100 |   93.18 |                   
+  index.ts                            |   93.18 |    83.33 |     100 |   93.18 | 36-38             
+ get-random-verse-old-testament/tests |     100 |      100 |     100 |     100 |                   
+  msw-handlers.ts                     |     100 |      100 |     100 |     100 |                   
+ get-random-verse/tests               |     100 |      100 |     100 |     100 |                   
+  msw-handlers.ts                     |     100 |      100 |     100 |     100 |                   
+ get-translation-by-params            |   94.64 |     90.9 |     100 |   94.64 |                   
+  index.ts                            |   94.64 |     90.9 |     100 |   94.64 | 49-51             
+ get-translation-by-params/tests      |     100 |      100 |     100 |     100 |                   
+  msw-handlers.ts                     |     100 |      100 |     100 |     100 |                   
+ shared                               |     100 |      100 |     100 |     100 |                   
+  index.ts                            |     100 |      100 |     100 |     100 |                   
+  msw-mock-server.ts                  |     100 |      100 |     100 |     100 |                   
+--------------------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 7 passed, 7 total
+Tests:       29 passed, 29 total
+Snapshots:   0 total
+Time:        43.377 s
+Ran all test suites.
+
+```
+
 ### 📘 Contributing
 Contributions, suggestions, and improvements are welcome.
 Feel free to open issues or pull requests.
